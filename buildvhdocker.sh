@@ -50,7 +50,7 @@ jvLen=${#jVersion[@]}
 if [ $jVersion = "" ]; then
     echo "No matching java versions: try version 17 if you are having trouble. Stopping process."
     sleep 10
-    #exit 1
+    exit 1
 fi
 
 # init pulls & variable setting
