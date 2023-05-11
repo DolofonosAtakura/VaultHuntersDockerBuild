@@ -136,4 +136,4 @@ for i in $dockerfile; do echo $i >> dockerfile; done
 sudo docker build -t vaulthunters:3.9.0.3 .
 
 echo "To start your container run (or build a docker-compose file for):"
-echo "sudo docker run -p 25569:25569 vaulthunters:3.9.0.3"
+echo "sudo docker run -p $portNum:$portNum vaulthunters:3.9.0.3"
