@@ -39,10 +39,6 @@ if [ $accept != "I accept" ]; then
     exit 1
 fi
 
-# Make our working folder
-mkdir VaultHunters
-cd VaultHunters
-
 # check if we should run
 # check java version (17+)
 jVersion=$(java --version | grep '17\|18\|19\|20')
@@ -52,6 +48,10 @@ if [ $jVersion = "" ]; then
     sleep 10
     exit 1
 fi
+
+# Make our working folder
+mkdir VaultHunters
+cd VaultHunters
 
 # init pulls & variable setting
 wget $vhurl
